@@ -6,4 +6,4 @@ This program generates a password from 8 charecters to 25 charecters, then tries
 ### License
 The license is in the file `LICENSE.md`, that's all.
 ### Why this program was made
-This program was made to get the password of a friend, his brother found his password and changed it, and because he didn't enter a recovery email, i made **_this_**
+This program was made to get the password of a friend, his brother found his password and changed it, and because he didn't enter a recovery email, I made **_this_**
