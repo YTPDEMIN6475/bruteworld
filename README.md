@@ -1,4 +1,4 @@
-# Scratch Bruteforce
+# Brutescratch
 ## A bruteforce program to hack scratch
 ### How it works
 This program generates a password from 8 charecters to 25 charecters, then tries to login using the generated password.
